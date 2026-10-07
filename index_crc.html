@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sree Ranga Crackers — Tumakuru Wholesale Fireworks</title>
+<meta name="description" content="Sree Ranga Crackers — Tumakuru's wholesale fireworks supplier. Sparklers, flower pots, garlands, aerial fancy and gift boxes at wholesale prices, sourced direct from Sivakasi. Add to your order and confirm instantly over WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Hind+Madurai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ CONFIG-LIKE TOKENS ============ */
+:root{
+  --red: #8e1515;
+  --red-dark: #6e1010;
+  --red-light: #a83535;
+  --cream: #f7f3e9;
+  --cream-card: #fffdf8;
+  --brown: #7f412d;
+  --brown-light: #a56a52;
+  --ink: #2b1810;
+  --muted: #8a7364;
+  --line: rgba(127,65,45,0.18);
+  --shadow: 0 2px 10px rgba(43,24,16,0.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Hind Madurai', sans-serif;
+  font-size:16px;
+  line-height:1.5;
+}
+h1,h2,h3,.display{
+  font-family:'Rozha One', serif;
+  font-weight:400;
+  color:var(--red);
+  margin:0;
+}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;}
+
+/* ============ TOPBAR ============ */
+.topbar{
+  position:sticky; top:0; z-index:40;
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:1180px;margin:0 auto;
+  display:flex;align-items:center;gap:20px;
+  padding:14px 20px;
+}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.brand-mark{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--red);color:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Rozha One',serif;font-size:20px;
+  flex-shrink:0;
+}
+.brand-text{line-height:1.15;}
+.brand-text .name{font-family:'Rozha One',serif;color:var(--red);font-size:20px;display:block;}
+.brand-text .sub{font-size:12px;color:var(--brown);letter-spacing:.02em;}
+.search-wrap{flex:1;max-width:420px;position:relative;}
+.search-wrap input{
+  width:100%;padding:10px 14px 10px 38px;
+  border:1px solid var(--line);border-radius:22px;
+  background:var(--cream-card);
+  font-family:inherit;font-size:14px;color:var(--ink);
+}
+.search-wrap input:focus{outline:2px solid var(--brown-light);outline-offset:1px;}
+.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.5;font-size:14px;}
+.cart-btn{
+  margin-left:auto;flex-shrink:0;
+  background:var(--red);color:var(--cream);
+  border:none;border-radius:22px;
+  padding:10px 18px;font-size:14px;font-weight:600;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:var(--shadow);
+}
+.cart-btn:hover{background:var(--red-dark);}
+.cart-count{
+  background:var(--cream);color:var(--red);
+  border-radius:50%;min-width:20px;height:20px;
+  font-size:12px;display:flex;align-items:center;justify-content:center;
+  padding:0 4px;font-weight:700;
+}
+
+/* category chip nav */
+.catnav{
+  position:sticky; top:73px; z-index:39;
+  background:var(--cream);
+  border-bottom:1px solid var(--line);
+  overflow-x:auto;
+  white-space:nowrap;
+  scrollbar-width:thin;
+}
+.catnav-inner{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;}
+.chip{
+  flex-shrink:0;
+  border:1px solid var(--line);
+  background:var(--cream-card);
+  color:var(--brown);
+  padding:7px 14px;border-radius:16px;
+  font-size:13px;font-weight:600;
+  transition:background .15s, color .15s;
+  text-decoration:none;
+}
+.chip:hover{background:var(--brown);color:var(--cream);}
+.chip.active{background:var(--red);color:var(--cream);border-color:var(--red);}
+
+/* ============ HERO ============ */
+.hero{
+  background:linear-gradient(135deg, var(--red) 0%, var(--brown) 100%);
+  color:var(--cream);
+  padding:46px 20px 40px;
+}
+.hero-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+.hero h1{color:var(--cream);font-size:clamp(30px,4.2vw,46px);max-width:600px;line-height:1.15;}
+.hero-discount{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:18px;
+}
+.hero-discount-num{
+  font-family:'Rozha One',serif;
+  font-size:clamp(56px,8vw,88px);
+  color:var(--cream);
+  line-height:1;
+  text-shadow:0 3px 0 rgba(0,0,0,0.18);
+  letter-spacing:-.01em;
+}
+.hero-discount-text{
+  font-size:clamp(15px,1.8vw,19px);
+  font-weight:800;
+  color:var(--cream);
+  line-height:1.2;
+  letter-spacing:.02em;
+  border-left:4px solid var(--cream);
+  padding-left:14px;
+}
+.hero p{margin-top:12px;max-width:480px;color:rgba(247,243,233,0.88);font-size:15.5px;}
+.hero-badges{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.hero-badge{
+  background:rgba(247,243,233,0.14);
+  border:1px solid rgba(247,243,233,0.3);
+  padding:7px 14px;border-radius:16px;font-size:13px;
+}
+.hero-badge-highlight{
+  background:var(--cream);color:var(--red);
+  font-weight:700;border-color:var(--cream);
+}
+.hero-spark{
+  width:150px;height:150px;flex-shrink:0;
+  opacity:.9;
+}
+
+/* ============ MAIN / SECTIONS ============ */
+main{max-width:1180px;margin:0 auto;padding:10px 20px 80px;}
+.category-section{padding-top:38px;scroll-margin-top:135px;}
+.category-head{
+  display:flex;align-items:baseline;gap:12px;
+  border-bottom:2px solid var(--brown);
+  padding-bottom:8px;margin-bottom:20px;
+}
+.category-head h2{font-size:26px;}
+.category-count{color:var(--muted);font-size:13px;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  gap:18px;
+}
+.card{
+  background:var(--cream-card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:box-shadow .15s, transform .15s;
+}
+.card:hover{box-shadow:0 6px 18px rgba(43,24,16,0.12);transform:translateY(-2px);}
+.card-img{
+  aspect-ratio:1/1;
+  background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  padding:14px;
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.card-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;margin:auto;}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;}
+.card-name{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.3;min-height:2.6em;}
+.price-row{display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:6px;}
+.price-orig{font-size:12.5px;color:var(--muted);text-decoration:line-through;}
+.price-now{font-size:17px;font-weight:700;color:var(--red);}
+.discount-badge{
+  position:absolute;top:8px;left:8px;
+  background:var(--red);color:var(--cream);
+  font-size:11px;font-weight:700;
+  padding:3px 8px;border-radius:12px;
+  letter-spacing:.01em;
+}
+.price-none{font-size:13px;color:var(--muted);font-style:italic;}
+.card-actions{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.qty-stepper{
+  display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;overflow:hidden;
+}
+.qty-stepper button{
+  background:var(--cream);border:none;width:28px;height:30px;font-size:15px;color:var(--brown);
+}
+.qty-stepper button:hover{background:var(--line);}
+.qty-stepper span{width:28px;text-align:center;font-size:13.5px;font-weight:600;}
+.add-btn{
+  flex:1;background:var(--brown);color:var(--cream);border:none;border-radius:8px;
+  padding:7px 10px;font-size:13px;font-weight:600;
+}
+.add-btn:hover{background:var(--red);}
+.add-btn.added{background:var(--red);}
+
+.no-results{padding:60px 20px;text-align:center;color:var(--muted);font-size:15px;display:none;}
+
+/* ============ CART DRAWER ============ */
+.overlay{
+  position:fixed;inset:0;background:rgba(43,24,16,0.45);
+  opacity:0;pointer-events:none;transition:opacity .2s;z-index:49;
+}
+.overlay.open{opacity:1;pointer-events:auto;}
+.drawer{
+  position:fixed;top:0;right:0;height:100%;width:min(400px,92vw);
+  background:var(--cream);
+  box-shadow:-8px 0 24px rgba(0,0,0,0.15);
+  transform:translateX(100%);
+  transition:transform .25s ease;
+  z-index:50;
+  display:flex;flex-direction:column;
+}
+.drawer.open{transform:translateX(0);}
+.drawer-head{
+  padding:18px 20px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.drawer-head h3{font-size:20px;}
+.drawer-close{background:none;border:none;font-size:22px;color:var(--brown);line-height:1;}
+.drawer-items{flex:1;overflow-y:auto;padding:12px 20px;}
+.drawer-item{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);}
+.drawer-item img{width:52px;height:52px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:6px;flex-shrink:0;}
+.drawer-item-info{flex:1;min-width:0;}
+.drawer-item-name{font-size:13.5px;font-weight:600;}
+.drawer-item-price{font-size:12.5px;color:var(--muted);margin-top:2px;}
+.drawer-item-actions{display:flex;align-items:center;gap:8px;margin-top:6px;}
+.drawer-remove{background:none;border:none;color:var(--red);font-size:12px;text-decoration:underline;padding:0;margin-left:8px;}
+.drawer-empty{padding:40px 10px;text-align:center;color:var(--muted);font-size:14px;}
+.drawer-foot{padding:16px 20px 20px;border-top:1px solid var(--line);}
+.drawer-total{display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin-bottom:12px;}
+.drawer-total .amt{color:var(--red);}
+.wa-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;background:#25863c;color:#fff;border:none;border-radius:10px;
+  padding:13px;font-size:15px;font-weight:700;margin-bottom:8px;
+}
+.wa-btn:hover{background:#1e6e30;}
+.clear-btn{
+  width:100%;background:none;border:1px solid var(--line);color:var(--brown);
+  border-radius:10px;padding:10px;font-size:13px;
+}
+.drawer-note{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.4;}
+.min-order-note{font-size:12.5px;margin:0 0 12px;padding:8px 10px;border-radius:8px;line-height:1.4;}
+.min-order-note.below{background:rgba(142,21,21,0.08);color:var(--red);}
+.min-order-note.met{background:rgba(37,134,60,0.1);color:#1e6e30;}
+.customer-form{display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+.customer-form label{font-size:12px;font-weight:600;color:var(--brown);display:flex;flex-direction:column;gap:4px;}
+.customer-form input, .customer-form textarea{
+  font-family:inherit;font-size:14px;color:var(--ink);
+  border:1px solid var(--line);border-radius:8px;
+  padding:9px 11px;background:var(--cream-card);
+  resize:none;
+}
+.customer-form input:focus, .customer-form textarea:focus{outline:2px solid var(--brown-light);outline-offset:1px;}
+.customer-form input.invalid, .customer-form textarea.invalid{border-color:var(--red);outline:none;}
+.form-error{color:var(--red);font-size:12px;margin:0;min-height:14px;}
+
+/* ============ FLOATING CART BUTTON (mobile) ============ */
+.fab-cart{
+  position:fixed;bottom:20px;right:20px;z-index:38;
+  background:var(--red);color:var(--cream);
+  border:none;border-radius:50%;
+  width:58px;height:58px;
+  box-shadow:0 6px 18px rgba(43,24,16,0.3);
+  display:none;
+  align-items:center;justify-content:center;
+  font-size:22px;
+}
+.fab-cart .cart-count{position:absolute;top:2px;right:2px;}
+
+/* ============ FOOTER ============ */
+footer{
+  background:var(--brown);color:var(--cream);
+  padding:40px 20px 24px;margin-top:20px;
+}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between;}
+.footer-col h4{font-family:'Rozha One',serif;font-weight:400;font-size:19px;margin-bottom:12px;color:var(--cream);}
+.footer-col p, .footer-col a{font-size:13.5px;color:rgba(247,243,233,0.82);line-height:1.7;text-decoration:none;display:block;}
+.footer-note{
+  max-width:1180px;margin:28px auto 0;padding-top:20px;
+  border-top:1px solid rgba(247,243,233,0.2);
+  font-size:12px;color:rgba(247,243,233,0.65);line-height:1.6;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:720px){
+  .search-wrap{display:none;}
+  .cart-btn span.label{display:none;}
+  .hero-spark{display:none;}
+  .fab-cart{display:flex;}
+  .catnav{top:65px;}
+  .category-section{scroll-margin-top:110px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">SR</div>
+      <div class="brand-text">
+        <span class="name">Sree Ranga Crackers</span>
+        <span class="sub">Tumakuru's Wholesale Fireworks Supplier</span>
+      </div>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" id="searchInput" placeholder="Search for sparklers, bombs, gift boxes...">
+    </div>
+    <button class="cart-btn" id="openCartBtn">
+      <span>&#128722;</span><span class="label">Enquiry Cart</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+  <nav class="catnav">
+    <div class="catnav-inner" id="catNav"></div>
+  </nav>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-discount">
+        <span class="hero-discount-num">90%</span>
+        <span class="hero-discount-text">DISCOUNT<br>ON ALL CRACKERS</span>
+      </div>
+      <h1>Tumakuru's Wholesale Fireworks Destination</h1>
+      <p>200+ fireworks sourced direct from Sivakasi &mdash; sparklers, flower pots, garlands, aerial fancy and gift boxes, at genuine wholesale prices for Tumakuru and nearby districts. Add what you need to your order and we'll confirm it over WhatsApp.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">Wholesale pricing</span>
+        <span class="hero-badge">Serving Tumakuru &amp; Karnataka</span>
+        <span class="hero-badge">Direct from Sivakasi</span>
+        <span class="hero-badge hero-badge-highlight">Minimum order ₹3,000</span>
+      </div>
+    </div>
+    <svg class="hero-spark" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#f7f3e9" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+        <line x1="100" y1="30" x2="100" y2="60"/>
+        <line x1="100" y1="140" x2="100" y2="170"/>
+        <line x1="30" y1="100" x2="60" y2="100"/>
+        <line x1="140" y1="100" x2="170" y2="100"/>
+        <line x1="52" y1="52" x2="73" y2="73"/>
+        <line x1="127" y1="127" x2="148" y2="148"/>
+        <line x1="148" y1="52" x2="127" y2="73"/>
+        <line x1="73" y1="127" x2="52" y2="148"/>
+      </g>
+      <circle cx="100" cy="100" r="26" fill="#f7f3e9" opacity="0.95"/>
+      <circle cx="100" cy="100" r="14" fill="#8e1515"/>
+    </svg>
+  </div>
+</section>
+
+<main id="main">
+  <div class="no-results" id="noResults">No products match your search. Try a different name.</div>
+  <div id="categoryContainer"></div>
+</main>
+
+<button class="fab-cart" id="fabCart">
+  &#128722;
+  <span class="cart-count" id="fabCartCount">0</span>
+</button>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your Enquiry</h3>
+    <button class="drawer-close" id="closeDrawerBtn">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="drawer-total"><span>Estimated total</span><span class="amt" id="drawerTotal">₹0</span></div>
+    <p class="min-order-note" id="minOrderNote"></p>
+    <div class="customer-form">
+      <label>Your Name
+        <input type="text" id="custName" placeholder="e.g. Ramesh Gowda" autocomplete="name">
+      </label>
+      <label>WhatsApp / Phone Number
+        <input type="tel" id="custPhone" placeholder="e.g. 9876543210" autocomplete="tel">
+      </label>
+      <label>Delivery Address
+        <textarea id="custAddress" rows="2" placeholder="House/shop no, street, area, Tumakuru" autocomplete="street-address"></textarea>
+      </label>
+      <p class="form-error" id="formError"></p>
+    </div>
+    <button class="wa-btn" id="waBtn">&#128172; Send Order on WhatsApp</button>
+    <button class="clear-btn" id="clearBtn">Clear cart</button>
+    <p class="drawer-note">As per Supreme Court guidelines, crackers are not sold online. This sends your order as an enquiry to our WhatsApp — our team will confirm availability, final pricing and delivery.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Sree Ranga Crackers</h4>
+      <p>Tumakuru's trusted wholesale fireworks supplier, sourced direct from Sivakasi. Gift boxes, sparklers and aerial shots for every celebration, at genuine wholesale rates.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/919449926815">WhatsApp: +91 94499 26815</a>
+      <a href="tel:+919449926815">Call: +91 94499 26815</a>
+      <p>Tumakuru, Karnataka, India<br><span style="opacity:.75">Wholesale stock sourced direct from Sivakasi</span></p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#sparklers">Sparklers</a>
+      <a href="#garlands-classic">Garlands</a>
+      <a href="#mega-display">Aerial Fancy</a>
+      <a href="#baby-variety-items">Gift Items</a>
+    </div>
+  </div>
+  <p class="footer-note">This site does not process online payments for firecrackers, in line with Supreme Court of India directives. All prices shown are indicative and subject to confirmation at the time of order. © <span id="year"></span> Sree Ranga Crackers.</p>
+</footer>
+
+<script>
+// ============ CONFIG — EDIT THESE ============
+const CONFIG = {
+  whatsappNumber: "919449926815", // orders are sent to this WhatsApp number
+  storeName: "Sree Ranga Crackers",
+  minOrder: 3000
+};
+
+// ============ PRODUCT DATA ============
+const CATEGORIES = [{"slug": "sparklers", "title": "Sparklers", "products": [{"id": 1, "name": "7 Cm Electric (10pcs/box)", "price": 30, "image": "https://img500.exportersindia.com/product_images/bc-500/2023/8/5834007/7cm-electric-10pcs-box-1692256054-7035450.jpeg", "orig": 300},
+ {"id": 2, "name": "7 Cm Color (10pcs/box)", "price": 30, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG9baBcwl1hZqT2r8U_26Tk2QheOK5TSo8ULjgz2SZ2A&s", "orig": 300}, 
+ {"id": 3, "name": "10 Cm Electric (10pcs/box)", "price": 40, "image": "https://gocracker.in/wp-content/uploads/2025/12/10cm-sparkler-electric-min.jpg", "orig": 400}, 
+ {"id": 4, "name": "10 Cm Color (10pcs/box)", "price": 40, "image": "https://soundcrackers.com/images/virtuemart/product/127679_amu.png", "orig": 400}, 
+ {"id": 5, "name": "12 Cm Electric (10pcs/box)", "price": 50, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_gZpqI8DEeOLwzR9rOGOsq7_NF2xT8rKtg4vg54zYNsWm9DarZiS-w1T&s=10", "orig": 500}, 
+ {"id": 6, "name": "12 Cm Color (10pcs/box)", "price": 50, "image": "https://imgcdn.iar.net.in/d992d54ae97874fee83cbb29d41bcf80044a7a395512a9c73246fe9af44c990dfddf8fba12f8c072ddec1161af02121a138355a054b5cb9acce0f61ff442a697/fit/1000/1000/sm/1/plain/https://assetv2.iar.net.in/trial1085.iar.net.in/3_4_2025/Mlx4BIv/12CM%20COLOUR.jpg", "orig": 500}, 
+ {"id": 7, "name": "15 Cm Electric (10pcs/box)", "price": 60, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIMWPWFznLUhMSZQWlwelKOBQl3xraOsEG7JWOoOYmeR9rCN6NMIuTTmD&s=10", "orig": 600},
+  {"id": 8, "name": "15 Cm Color (10pcs/box)", "price": 60, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJcV4E0kmFbhlcS8h17i3ZaKlfHDhF8n65ms7Gvzaqvw&s=10", "orig": 600}, 
+  {"id": 9, "name": "30 Cm Electric (5pcs/box)", "price": 70, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcpq9yO-kSgJURgz74OC4q3A8Y0yKHAPo5CsjuogbHzk3UsDisavb0am8&s=10", "orig": 700}, 
+  {"id": 10, "name": "30 Cm Color (5pcs/box)", "price": 70, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzdzOHvAx9z4A3pWrKRSakeD2TPhosZ2aIRODMN2PyCg&s=10", "orig": 700}, 
+  {"id": 11, "name": "30 Cm Green (5pcs/box)", "price": 75, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4aZK6czUv-d30wyyvfwlYy_Q0IDSQuq8_CmRf1NtLvw&s=10", "orig": 750},
+  {"id": 12, "name": "55 Cm Electric (5pcs/box)", "price": 250, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKEEJLQB9seYv5RXSVnvDTZkADHCIFhHqeXJUC5RR89w&s=10", "orig": 2500}, 
+  {"id": 13, "name": "55 cm Color (5pcs/box)", "price": 250, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEoMENQ1Nd-yeIzLixblaINbuRAbN8LqMJlhkgO1gECsggDh20-aWqYF0&s=10", "orig": 2500}]}, {"slug": "flower-pot", "title": "Flower Pots", "products": 
+  [{"id": 14, "name": "Flower pots Big (10pcs/box)", "price": 90, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXZx45eYRcX6W7vhSrH7_Gq3OUV_P0i57_U5lBIMmzxA&s=10", "orig": 900}, 
+  {"id": 15, "name": "Flower pots Special (10pcs/box)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrP1-odbpGAqsEGsW5W7ABDtKk3R0GN_80_5S8Wpjbbw&s=10", "orig": 1200}, 
+  {"id": 16, "name": "Flower pots Ashoks (10pcs/box)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3u8OWe_Q5wG3lOHWF3lbXOep9W3TP9Qw9t2MsEIZ0aQ&s=10", "orig": 1600}, 
+  {"id": 17, "name": "Flower pots Deluxe (5pcs/box)", "price": 180, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzRJqp21oyMfakQPYFeVtPvVhpsB7hmx9ygOEwNCie-w&s=10", "orig": 1800},
+   {"id": 18, "name": "Power Koti (5pcs/box)", "price": 180, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa1Mob32SyoE8m6VBQKKwj_F0qNChecGKtuNuk4DBjaA&s=10", "orig": 1800},
+    {"id": 19, "name": "Colour koti (10pcs/box)", "price": 260, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp174gQ_WgoE0d8MG0UQYe1l-dhSJFn-8WlupMonqOmA&s=10", "orig": 2600},
+     {"id": 20, "name": "Gold Coin Fountain (5pcs/box)", "price": 200, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ABdKBvO8N-Xv8w2j2u-VuQhQ3wuIgd1KaF6Km1QJSg&s=10", "orig": 2000}, 
+     {"id": 21, "name": "Tri Colour Fountains (5pcs/box)", "price": 350, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaJFUrP9iwok7qATAhwosFa9850Hq165de4a5ZV_4lqQ&s=10", "orig": 3500}]}, {"slug": "ground-chakkers", "title": "Ground Chakkars", "products": 
+  [{"id": 22, "name": "Ground chakkar Big (10pcs)", "price": 90, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYEs00kpBh1QtG4HB07gGw-cbJLuGR_MLJ9H5-j5qOxQ&s=10", "orig": 900},
+   {"id": 23, "name": "Ground chakkar Special (10pcs)", "price": 110, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUeQwvIbAyDljZRh4GUFZ4LLHGulEnKjQPqhDw5PwrqQ&s=10", "orig": 1100},
+    {"id": 24, "name": "Ground chakkar Deluxe (10pcs)", "price": 190, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSr0dY7LDfrlSlgpiPX1RiIjgrzYpiZY7aGeKulbW3Bg&s=10", "orig": 1900},
+     {"id": 25, "name": "Disco wheel (5pcs/box)", "price": 100, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-LJzwoKtShyjOz3tOzLjtybqMC3GzTKadzWwwLHjdDw&s=10", "orig": 1000},
+      {"id": 26, "name": "Disco wheel (10pcs/box)", "price": 150, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1qYUIpxeqWeT39IihRwkh8Hm91pAi8YA2L9dje2PQ8g&s=10", "orig": 1500}]}, {"slug": "twinkling-star", "title": "Twinkling Stars", "products": 
+  [{"id": 27, "name": "11/2\" Twinkling star (10pcs/box)", "price": 50, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHOF7PZOsdcrVAvqXPdE-cAP0Ky0sjFMZZgo_mEFVn4A&s=10", "orig": 500}, 
+  {"id": 28, "name": "4\" Twinkling star (10pcs/box)", "price": 88, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7WoFVgwP6bOnWvH50qlJp5n6wzFNgwJ9fRCO0Z_5DJg&s=10", "orig": 880}]}, {"slug": "enjoy-pencil", "title": "Enjoy Pencils", "products": 
+  [{"id": 29, "name": "Photo flash pencil (3pcs/box)", "price": 70, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi3JaxNUx88hSmepqCeJNFNZoC2KvX4OxRU8vxSurvEQ&s=10", "orig": 700}, 
+  {"id": 30, "name": "Ultra Candie (3pcs/box)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfrWhmNd-yjtruZqPueqH4mPr13KHFNHvxmoIMBGQ_mA&s", "orig": 1200}, 
+  {"id": 31, "name": "Magic Feather (3pcs/box)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh4xz3KBZLcNfDVu2MVDbVUBu-ABTUj2nJMok67aFRjw&s=10", "orig": 1200}]}, {"slug": "one-sound-crackers", "title": "One Sound Crackers", "products": 
+  [{"id": 32, "name": "2¾\" Kuruvi vedi Brand (5pcs/pkt)", "price": 25, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq9jUb99pe6fWG-sPrkRHv9ZRIf4XX7Mfj-gBgUU888Q&s=10", "orig": 250}, 
+  {"id": 33, "name": "4\" Laxmi vedi (5pcs/pkt)", "price": 35, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGTY7LC1uNsicMz4egX57go5S34nqooQ0yZogIWJ3P3g&s=10", "orig": 350}, 
+  {"id": 34, "name": "6\" Jalli kattu (5pcs/pkt)", "price": 55, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzdtx3qcch8wFcH_CJkRX_6EEHmpQrvqdco2CmqDgxw&s=10", "orig": 550}]}, {"slug": "bijili", "title": "Bijili", "products": 
+  [{"id": 35, "name": "Red Bijili (100pcs/bag)", "price": 60, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxR4aFuasTr6CSu0LQD5cc3WEyTuhSsO7jCGtaOxRCjA&s=10", "orig": 600}]}, {"slug": "rocket", "title": "Rockets", "products": 
+  [{"id": 36, "name": "Bomb Rocket (10pcs/box)", "price": 150, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-4ZsUg4cXKq0WPdyuQOumekuIicTErYjgWtnEWHul-g&s=10", "orig": 1500}, 
+  {"id": 37, "name": "Lunik Rocket (10pcs/box)", "price": 250, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVFJlUP5fNMfjq7MVJ8sAqhvAuEAuwdVDkz6asryT50Q&s=10", "orig": 2500}, 
+  {"id": 38, "name": "Whistling Rocket (10pcs/box)", "price": 300, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDI7gdjXCeK7CXWYuUGx76jH-CUgB6sQRY8JcShHPbZg&s=10", "orig": 3000}]}, {"slug": "bombs", "title": "Bombs", "products": 
+  [{"id": 39, "name": "Hydro Bomb (10pcs/box)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF-JTYCLkCayF_lruGwtl306WVbvgpre4sIrSqsQl8bw&s=10", "orig": 1200}, 
+  {"id": 40, "name": "King of King Bomb (10pcs/box)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-pjH3yshxGFN10ltcmFEs5HuH5jS5F9Bcs3Gp6i8Fg&s=10", "orig": 1600}, 
+  {"id": 41, "name": "Classic Bomb (10pcs/box)", "price": 200, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Haw1cBrCF-MgzyLIjEduM4CZs5Eqcq9UAzapvbzAgQ&s=10", "orig": 2000}, 
+  {"id": 42, "name": "555 Bomb (10pcs/box)", "price": 230, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPN4F3uKO5vUuHokflq8uu3jC5ptWQiIpQn_FTuToYSQ&s=10", "orig": 2300}]}, {"slug": "giant-crackers", "title": "Giant Crackers", "products": 
+  [{"id": 43, "name": "28 Giant Crackers (1pcs/pkt)", "price": 40, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoX6SOZJazMZ5zY2-lCJl3mzKTqzjk3v0QsPd40S_nfw&s=10", "orig": 400}, 
+  {"id": 44, "name": "56 Giant Crackers (1pcs/pkt)", "price": 55, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMnEbNLbpPcxO6sPZdyZdlVQUHvoOby5wtF-dW0N9Xmw&s=10", "orig": 550}, 
+  {"id": 45, "name": "24 Deluxe Crackers (1pcs/pkt)", "price": 60, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsYudByy9aH8rXej3NlsjX1mMHfRRealG9AVr3ZhKd6Q&s=10", "orig": 600}]}, {"slug": "garlands-classic", "title": "Garlands — Classic", "products": 
+  [{"id": 46, "name": "1000 Wala (Classic)", "price": 350, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbp-B5wsMVGmSmZ2RJLbMLJ2wzKbqP4rA_5KSwAHgf9A&s", "orig": 3500}, 
+  {"id": 47, "name": "2000 Wala (Classic)", "price": 700, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-FCDVY-ipIh1Nurwf85-XVvKw1-VEDTrBrZMPH880tA&s=10", "orig": 7000}]}, {"slug": "garlands-prime", "title": "Garlands — Prime", "products": 
+  [{"id": 48, "name": "100 Wala (Prime)", "price": 70, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsf33usGp5dTuwJhCb-GbE29dTrFU7Dw7TcY6-zoYVnw&s=10", "orig": 700}, 
+  {"id": 49, "name": "200 Wala (Prime)", "price": 140, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRfQ12FnHM4V_cd3I7RJL1L_bZL27TQhU86pZOrvwRNg&s=10", "orig": 1400}, 
+  {"id": 50, "name": "1000 Wala (Prime)", "price": 400, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSofwuMCX6qNwv8ox-ihw6qUR-PszqMZlQ0-BJ93i9PtA&s=10", "orig": 4000}, 
+  {"id": 51, "name": "2000 Wala (Prime)", "price": 800, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0soaCUCatZaS5fLbFVwq7OWP79IEKW2TUocEpnDwkAg&s=10", "orig": 8000}, 
+  {"id": 52, "name": "5000 Wala (Prime)", "price": 2000, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpnyEpjJDPZcgD4XrK6g9YbCH2k9LZZkRRLqZIU6_BCQ&s=10", "orig": 20000}, 
+  {"id": 53, "name": "10000 Wala (Prime)", "price": 3500, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVtsnth04kc_nQS_EUqLCF2jwe2WvgyCzLC6RYPfCoIQ&s=10", "orig": 35000}]}, {"slug": "baby-variety-items", "title": "Baby Variety Items", "products": 
+  [{"id": 54, "name": "4\" Beer Blue Fountain Tin (1pcs)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLRV6jTIBTMVSNH0oDolKtwCf07x219P7ea1FNAHVlA&s=10", "orig": 1200}, 
+  {"id": 55, "name": "4\" Beer Green Fountain Tin (1pcs)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwPjOLoyJcxcX-qHO3vwlJA6W2GxJ0gCpXpSbW6wOR7A&s=10", "orig": 1200}, 
+  {"id": 56, "name": "4\" Beer Red Fountain Tin (1pcs)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu8RH8DX7rIzpz5LHida3LTWqM8G2qyH6RGSNEOQ7jXg&s=10", "orig": 1200}, 
+  {"id": 57, "name": "4½\" Amazing Falls Tin (1pcs)", "price": 150, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVO6kuQaDkgbEByIZdppkQ1MI2CW4lDzYX4q-ioLa-Nw&s=10", "orig": 1500},
+  {"id": 58, "name": "4½\" Miracle Fountain Tin (1pcs)", "price": 150, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhzbMvIDAOO7Ilge3AVyhXFhhtkrLX2BtmwGerzuYCQ&s", "orig": 1500}, 
+  {"id": 59, "name": "6\" Happy Happy Fountain Tin", "price": 170, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSds-FKKyblTPqTt0yayxOfe_5BsHJuYzEp5W9CUqug&s=10", "orig": 1700}, 
+  {"id": 60, "name": "6\" Popcorn Fountain Tin (1pcs)", "price": 170, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqCEB5VPDV6gR-Tkj7t48ZmtKVVT9dbh1SmR8ml7Xoeg&s=10", "orig": 1700}, 
+  {"id": 61, "name": "4X4 Wheel (5pcs/box)", "price": 220, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6j0Z0IeACyjDJpUNLQ0984yQduOtFM8nfdeTFUtr-6w&s", "orig": 2200}, 
+  {"id": 62, "name": "Peacock Fountain (1pcs)", "price": 220, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy7LvIpLFZHxmLIgfj0r5jDvWyNCOt8LLKhWDc6lKcRg&s=10", "orig": 2200}, 
+  {"id": 63, "name": "Black Money (1pcs/box)", "price": 60, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFBxOfHpeEOXJwhMX7HQSwkOMvO1nUuaNsLaPNP7WkFw&s=10", "orig": 600}, 
+  {"id": 64, "name": "Chocolate \"Water Queen\" (1pcs)", "price": 60, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_3S59fYcLYLjbT2RQlTaOYlGJuPjRCP7nK1YfoEF7w&s", "orig": 600}, 
+  {"id": 65, "name": "Velum Mayilum (1pcs)", "price": 140, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ2Zz76M8E2YsDahQaTWkMtJIGE4Ja2ekUkNTvkDFA6A&s=10", "orig": 1400}, 
+  {"id": 66, "name": "Cricket Bat (1pcs)", "price": 140, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJqS5dXNjdeWMAVw6kkldGzdhAN2aXzpQxfgUaZsWkEg&s=10", "orig": 1400}, 
+  {"id": 67, "name": "Butterfly color chnsi (10pcs/box)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxMA38W76HIdWscro7pH06n3hT82aZxlKne9TwOoMAdA&s=10", "orig": 1600}, 
+  {"id": 68, "name": "Drone (5pcs/box)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRIsBLRh5bc0SJcVgNR-TBlyuDDmE67DnCT8dTdTJRQA&s=10", "orig": 1600}, 
+  {"id": 69, "name": "Helicopter (5pcs/box)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGye-Ff4TGkPFg1BggdK8jkbet3z0lWzrVZyB9SYNHQw&s=10", "orig": 1600}, 
+  {"id": 70, "name": "Corona (1pcs)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8RLBzSJzeVAy65MGZHFm2wlIP-c_vV2UyGAVr34QB7g&s", "orig": 1600}, 
+  {"id": 71, "name": "5G Net Work (1pcs)", "price": 160, "image": "https://5.imimg.com/data5/SELLER/Default/2025/3/497019074/EI/UY/CH/15966155/rajavel-5g-plus-colorful-skyshot-cracker.jpeg", "orig": 1600}, 
+  {"id": 72, "name": "Peacock 3 Colour (1pc/box)", "price": 350, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM_OCb1JGprfnG6hYQeSggZRG7CsD00zLu9G9XUfs1Lg&s=10", "orig": 3500}, 
+  {"id": 73, "name": "Photo Flash (5pcs/box)", "price": 80, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAELLlkNXeLCIro2fOdITP-4RnhBoTjW-r0ApwCj8VOw&s=10", "orig": 800}, 
+  {"id": 74, "name": "Water Queen (1pcs/tin)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_3S59fYcLYLjbT2RQlTaOYlGJuPjRCP7nK1YfoEF7w&s", "orig": 1600}, 
+  {"id": 75, "name": "Magic Show (1pcs)", "price": 200, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXTOF3AuqMeQPqHs2-KNq0gPxsY-F8cIqpioMo6lCkeQ&s=10", "orig": 2000}, 
+  {"id": 76, "name": "Colour Smoke (3pcs/box)", "price": 210, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPvRy28GD3bi_EEctK9Lrcyf_uszE2sJB86Z7d4jR6cg&s", "orig": 2100}, 
+  {"id": 77, "name": "Lollipop Crackers (5pcs/box)", "price": 210, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ42i_gf4Iu-8nPEJuW56O0-bLWM9o6hFHe8CH1hTWnwQ&s=10", "orig": 2100}, 
+  {"id": 78, "name": "Mega Siren (3pcs/box)", "price": 300, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScdPlnR28O0E8GXTeCkwFkR9DeraiWaE7FOsREp2Y76Q&s=10", "orig": 3000}]}, {"slug": "color-rider-shots", "title": "Color Rider Shots", "products": 
+  [{"id": 79, "name": "12 Shot Color Rider (1pcs)", "price": 250, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VIyiJpujMw8xgaoSWUFdoBX9uHqN4tzcSmXwz5eCkQ&s=10", "orig": 2500}, 
+  {"id": 80, "name": "25 Shot Color Rider (1pcs)", "price": 500, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk76oMO8FHypIdk95FqgW_hOvqTsjksiQTbOOcO9w3IQ&s=10", "orig": 5000}, 
+  {"id": 81, "name": "50 Shot Color Rider (1pcs)", "price": 1100, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqFYs3jvzJ_70_RX-prwoU1KogUwvzPGGL8-AJO5zYg&s=10", "orig": 11000}]}, {"slug": "multi-color-shot", "title": "Multi Color Shots", "products": 
+  [{"id": 82, "name": "30 Shot Multi Color", "price": 500, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShXq5MjW_CwyAwmgbA6IXHq-pXF0gslAkP5Fy9e9-iTQ&s=10", "orig": 5000}, 
+  {"id": 83, "name": "60 Shot Multi Color", "price": 1000, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXa5IDs4Ej1Sg36VUFmgn9XxN7Hzkq2_AkV0FuEsEsIQ&s=10", "orig": 10000}, 
+  {"id": 84, "name": "120 Shot Multi Color", "price": 2300, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8nHHV3K8T1GzZzGPekUKmyJ27fzD5CozCBitCaR2VGA&s=10", "orig": 23000}, 
+  {"id": 85, "name": "30 Shot Multi Color (Brand)", "price": 600, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG6k92U_Loicx82v1KKGYTJ06KgyFVXMqx5-YW0at_HA&s=10", "orig": 6000}, 
+  {"id": 86, "name": "60 Shot Multi Color (Brand)", "price": 1200, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWZ1TdVGt6ccAOZ1tZvS_v-Qet7Dh7MXBlNPl4GYzGLg&s=10", "orig": 12000}, 
+  {"id": 87, "name": "120 Shot Multi Color (Brand)", "price": 3500, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhB5oC9oaLredeb_b-AAwieo52pA2yrcZSNv3-6-FeYA&s=10", "orig": 35000}]}, {"slug": "mini-aerial-fancy", "title": "Mini Aerial Fancy", "products": 
+  [{"id": 88, "name": "Sky Shot (1pcs)", "price": 25, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWSAZu24zl84unDEUFqMTGIX-dsJ1BBn0vyJZ8cAZO6Q&s=10", "orig": 250}, 
+  {"id": 89, "name": "7 Shot Color (5pcs/box)", "price": 280, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJUHBMvd6b26g_PKMcisNelsvLLBNrJHX39zc1414VQ&s=10", "orig": 2800}, 
+  {"id": 90, "name": "Nemo Shot (5pcs/box)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9L5-1-Tq-AFu8rkKYRmxrjuDnhsJ10COZeyWbFloshg&s=10", "orig": 1600}, 
+  {"id": 91, "name": "Sky King (5pcs/box)", "price": 160, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuq1mVe8EUED11Tgc_RDrCvxkG97tdNVXSBi1BmOSGfQ&s", "orig": 1600}]}, {"slug": "mega-display", "title": "Mega Display", "products": 
+  [{"id": 92, "name": "2\" Aerial Fancy Yellow (1pcs)", "price": 110, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT855GLtfNlZznrnwKsl8KxYTbtiNSZve3ZroOaXditmA&s=10", "orig": 1100}, 
+  {"id": 93, "name": "2\" Aerial Fancy Green (1pcs)", "price": 110, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyYpQdAVFvCzOYQJJzZN-A2VlsqOO7m3goL2TZHfJF3w&s=10", "orig": 1100}, 
+  {"id": 94, "name": "2\" Aerial Fancy Red (1pcs)", "price": 110, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVbQelA1b2psy0IYp5egMAY9cNgSQsIUjakX-KaItKbA&s=10", "orig": 1100}, 
+  {"id": 95, "name": "2\" Aerial Fancy White (1pcs)", "price": 110, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRADA1jtwYhQLCe5NF_5xy1RgjXqhW9t_76AnhbHLg2HA&s=10", "orig": 1100}, 
+  {"id": 96, "name": "2\" Aerial Fancy (3pcs)", "price": 350, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU97CkGfvJUhYcBd7x-8vXCLSHUd9SLENr_IUCrVT30A&s=10", "orig": 3500}, 
+  {"id": 97, "name": "3½\" Fancy, 6 Designs (1pcs)", "price": 350, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREXZaL25HHFy0bJaVmbUGlKxux38DzjKbz5g311qhCow&s=10", "orig": 3500}, 
+  {"id": 98, "name": "4\" Fancy, 6 Designs (1pcs)", "price": 400, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Dglv0W99cOvTbCRxmBy7-FMy_vi6hoKYqD04v1DTaA&s=10", "orig": 4000}, 
+  {"id": 99, "name": "5\" Fancy, 6 Designs (1pcs)", "price": 500, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOk09z9o6HR3fD0kzHnOVMKYum5YeAfKZ9CDCjOjGz2A&s", "orig": 5000}]}, {"slug": "2-color-fountain", "title": "2¼\" Color Fountain", "products": 
+  [{"id": 100, "name": "Tom Jerry Gold (1pcs/box)", "price": 50, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Ms_lLblAEmlMmKqIwrsYtXiAGp74GksRVAj-sJnlPg&s=10", "orig": 500}, 
+  {"id": 101, "name": "Tom Jerry Green (1pcs/box)", "price": 50, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw9RiYQQa3B9vvwvxVNQAHEmGUodHUksE86_MZs8NphA&s=10", "orig": 500}, 
+  {"id": 102, "name": "Tom Jerry Red (1pcs/box)", "price": 50, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlsg1G3UnGnxqy15eIStzM1r1SkAax6s_Cb9-2jevCWg&s=10", "orig": 500}, 
+  {"id": 103, "name": "Tom Jerry Silver (1pcs/box)", "price": 50, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR63WxV0GLj9957WZnNWOI6y_7jC4TZU8rYULXXkAFKPQ&s=10", "orig": 500}]}, {"slug": "1-color-fountain", "title": "1¾\" Color Fountain", "products": [{"id": 104, "name": "Oreo Gold (5pcs/box)", "price": 150, "image": "https://skybluecrackers.com/wp-content/uploads/2024/07/OREO-GOLD-300x300.png  ", "orig": 1500}, 
+  {"id": 105, "name": "Oreo Green (5pcs/box)", "price": 150, "image": "https://skybluecrackers.com/wp-content/uploads/2024/07/OREO-GREEN-300x300.png", "orig": 1500}, 
+  {"id": 106, "name": "Oreo Red (5pcs/box)", "price": 150, "image": "https://skybluecrackers.com/wp-content/uploads/2024/07/OREO-RED-300x300.png", "orig": 1500}, 
+  {"id": 107, "name": "Oreo Red & Green (5pcs/box)", "price": 150, "image": "https://skybluecrackers.com/wp-content/uploads/2024/07/OREO-GREEN-300x300.png", "orig": 1500}, 
+  {"id": 108, "name": "Oreo Silver (5pcs/box)", "price": 150, "image": "https://skybluecrackers.com/wp-content/uploads/2024/07/OREO-SILVER-300x300.png", "orig": 1500}]}, {"slug": "matches", "title": "Matches", "products": 
+  [{"id": 109, "name": "3D 3in1 (3pcs/box)", "price": 80, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Tp3MimqNOq5PDuT_wgVp8ZrWwFIIjmzHYaBTZXxlFQ&s=10", "orig": 800}, 
+  {"id": 110, "name": "Dora Matches (3pcs/box)", "price": 120, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuvlVvGtNbBYCEHa3iljBq9tYLwhVJ1JzaMagQR2XaCQ&s=10", "orig": 1200}, 
+  {"id": 111, "name": "Mega size Laptop (10pcs/box)", "price": 300, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTER6b26m48MdnKR0mtGk4KczVWSoePVGiu1K5aAjFDWw&s=10", "orig": 3000}]}, {"slug": "adiyal-paper-bomb", "title": "Adiyal Paper Bomb", "products": 
+  [{"id": 112, "name": "Adiyal Paper Bomb (Small)", "price": 70, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXOdvrERpZUBgDI4PnR0gyaA8V_qQX1QHRnjyqcaOWWw&s=10", "orig": 700}, 
+  {"id": 113, "name": "Adiyal Paper Bomb (½kg)", "price": 150, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjzgg0nLWQmmEll1NDjvjjGjnrnuBbHm01HZ63LxNSpg&s=10", "orig": 1500}, {"id": 114, "name": "Adiyal Paper Bomb (1kg)", "price": 250, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTJttnx874GA4UeXDs7rQ5ADIylpTlQfZKu-Cy8MPVHA&s=10", "orig": 2500}]}];
+
+// ============ STATE ============
+let cart = {}; // id -> qty
+try {
+  const saved = localStorage.getItem('src_cart');
+  if (saved) cart = JSON.parse(saved);
+} catch(e) {}
+
+const productIndex = {};
+CATEGORIES.forEach(cat => cat.products.forEach(p => productIndex[p.id] = p));
+
+function saveCart(){
+  try{ localStorage.setItem('src_cart', JSON.stringify(cart)); }catch(e){}
+}
+
+// Saved customer details (name/phone/address) become the default next time
+let customer = { name: "", phone: "", address: "" };
+try {
+  const savedCust = localStorage.getItem('src_customer');
+  if (savedCust) customer = JSON.parse(savedCust);
+} catch(e) {}
+
+function saveCustomer(){
+  try{ localStorage.setItem('src_customer', JSON.stringify(customer)); }catch(e){}
+}
+
+function fmtRs(n){ return '₹' + n.toLocaleString('en-IN'); }
+
+// ============ RENDER CATEGORY NAV ============
+const catNav = document.getElementById('catNav');
+CATEGORIES.forEach(cat=>{
+  const a = document.createElement('a');
+  a.href = '#'+cat.slug;
+  a.className = 'chip';
+  a.textContent = cat.title;
+  a.dataset.slug = cat.slug;
+  catNav.appendChild(a);
+});
+
+// ============ RENDER PRODUCTS ============
+const container = document.getElementById('categoryContainer');
+
+function productCardHTML(p){
+  const qty = cart[p.id] || 0;
+  const priceBlock = p.price
+    ? `<span class="price-orig">${fmtRs(p.orig)}</span><span class="price-now">${fmtRs(p.price)}</span>`
+    : `<span class="price-none">Price on enquiry</span>`;
+  const badge = (p.price && p.orig) ? `<span class="discount-badge">90% OFF</span>` : '';
+  return `
+  <div class="card" data-id="${p.id}" data-name="${p.name.toLowerCase()}">
+    <div class="card-img">${badge}<img src="${p.image}" alt="${p.name}" loading="lazy"></div>
+    <div class="card-body">
+      <div class="card-name">${p.name}</div>
+            <div class="price-row">${priceBlock}</div>
+      <div class="card-actions">
+        <div class="qty-stepper">
+          <button class="qty-minus" aria-label="Decrease quantity">−</button>
+          <span class="qty-val">${qty}</span>
+          <button class="qty-plus" aria-label="Increase quantity">+</button>
+        </div>
+        <button class="add-btn ${qty>0?'added':''}">${qty>0?'Added':'Add'}</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderAll(){
+  container.innerHTML = '';
+  CATEGORIES.forEach(cat=>{
+    const section = document.createElement('section');
+    section.className = 'category-section';
+    section.id = cat.slug;
+    section.innerHTML = `
+      <div class="category-head">
+        <h2>${cat.title}</h2>
+        <span class="category-count">${cat.products.length} items</span>
+      </div>
+      <div class="grid">${cat.products.map(productCardHTML).join('')}</div>
+    `;
+    container.appendChild(section);
+  });
+}
+renderAll();
+
+// ============ EVENT DELEGATION: qty + add ============
+container.addEventListener('click', (e)=>{
+  const card = e.target.closest('.card');
+  if(!card) return;
+  const id = parseInt(card.dataset.id);
+  const p = productIndex[id];
+
+  if(e.target.classList.contains('qty-plus')){
+    cart[id] = (cart[id]||0)+1;
+    updateCardQty(card, cart[id]);
+    saveCart(); updateCartUI();
+  } else if(e.target.classList.contains('qty-minus')){
+    if(cart[id]){ cart[id]--; if(cart[id]<=0) delete cart[id]; }
+    updateCardQty(card, cart[id]||0);
+    saveCart(); updateCartUI();
+  } else if(e.target.classList.contains('add-btn')){
+    cart[id] = (cart[id]||0)+1;
+    updateCardQty(card, cart[id]);
+    e.target.classList.add('added');
+    e.target.textContent = 'Added';
+    saveCart(); updateCartUI();
+  }
+});
+
+function updateCardQty(card, qty){
+  card.querySelector('.qty-val').textContent = qty;
+  const btn = card.querySelector('.add-btn');
+  if(qty>0){ btn.classList.add('added'); btn.textContent='Added'; }
+  else { btn.classList.remove('added'); btn.textContent='Add'; }
+}
+
+// ============ CART DRAWER ============
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+const drawerItems = document.getElementById('drawerItems');
+const drawerTotal = document.getElementById('drawerTotal');
+const cartCountEl = document.getElementById('cartCount');
+const fabCartCountEl = document.getElementById('fabCartCount');
+
+function openDrawer(){
+  drawer.classList.add('open'); overlay.classList.add('open'); renderDrawer();
+  document.getElementById('custName').value = customer.name;
+  document.getElementById('custPhone').value = customer.phone;
+  document.getElementById('custAddress').value = customer.address;
+}
+function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); }
+document.getElementById('openCartBtn').addEventListener('click', openDrawer);
+document.getElementById('fabCart').addEventListener('click', openDrawer);
+document.getElementById('closeDrawerBtn').addEventListener('click', closeDrawer);
+overlay.addEventListener('click', closeDrawer);
+
+function renderDrawer(){
+  const ids = Object.keys(cart).filter(id=>cart[id]>0);
+  const minOrderNote = document.getElementById('minOrderNote');
+  if(ids.length===0){
+    drawerItems.innerHTML = '<div class="drawer-empty">Your enquiry cart is empty.<br>Add a few crackers to get started.</div>';
+    drawerTotal.textContent = fmtRs(0);
+    minOrderNote.textContent = `Minimum order: ${fmtRs(CONFIG.minOrder)}`;
+    minOrderNote.className = 'min-order-note below';
+    return;
+  }
+  let total = 0;
+  drawerItems.innerHTML = ids.map(id=>{
+    const p = productIndex[id];
+    const qty = cart[id];
+    const lineTotal = (p.price||0)*qty;
+    total += lineTotal;
+    return `
+    <div class="drawer-item" data-id="${id}">
+      <img src="${p.image}" alt="${p.name}">
+      <div class="drawer-item-info">
+        <div class="drawer-item-name">${p.name}</div>
+        <div class="drawer-item-price">${p.price?fmtRs(p.price)+' x '+qty+' = '+fmtRs(lineTotal):'Price on enquiry'}</div>
+        <div class="drawer-item-actions">
+          <div class="qty-stepper">
+            <button class="qty-minus" aria-label="Decrease">−</button>
+            <span class="qty-val">${qty}</span>
+            <button class="qty-plus" aria-label="Increase">+</button>
+          </div>
+          <button class="drawer-remove">Remove</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  drawerTotal.textContent = fmtRs(total);
+  if(total < CONFIG.minOrder){
+    minOrderNote.textContent = `Add ${fmtRs(CONFIG.minOrder-total)} more to reach the ${fmtRs(CONFIG.minOrder)} minimum order.`;
+    minOrderNote.className = 'min-order-note below';
+  } else {
+    minOrderNote.textContent = `Minimum order met — you're ready to send your order!`;
+    minOrderNote.className = 'min-order-note met';
+  }
+}
+
+drawerItems.addEventListener('click', (e)=>{
+  const item = e.target.closest('.drawer-item');
+  if(!item) return;
+  const id = item.dataset.id;
+  if(e.target.classList.contains('qty-plus')){
+    cart[id] = (cart[id]||0)+1;
+  } else if(e.target.classList.contains('qty-minus')){
+    cart[id]--; if(cart[id]<=0) delete cart[id];
+  } else if(e.target.classList.contains('drawer-remove')){
+    delete cart[id];
+  } else { return; }
+  saveCart(); renderDrawer(); updateCartUI(); syncCardQty(id);
+});
+
+function syncCardQty(id){
+  const card = container.querySelector(`.card[data-id="${id}"]`);
+  if(card) updateCardQty(card, cart[id]||0);
+}
+
+document.getElementById('clearBtn').addEventListener('click', ()=>{
+  cart = {}; saveCart(); renderDrawer(); updateCartUI(); renderAll();
+});
+
+const nameInput = document.getElementById('custName');
+const phoneInput = document.getElementById('custPhone');
+const addressInput = document.getElementById('custAddress');
+const formError = document.getElementById('formError');
+
+document.getElementById('waBtn').addEventListener('click', ()=>{
+  const ids = Object.keys(cart).filter(id=>cart[id]>0);
+  if(ids.length===0){ alert('Please add at least one item to your order.'); return; }
+
+  const cartTotal = ids.reduce((sum,id)=>sum + (productIndex[id].price||0)*cart[id], 0);
+  if(cartTotal < CONFIG.minOrder){
+    formError.textContent = `Minimum order is ${fmtRs(CONFIG.minOrder)}. Please add ${fmtRs(CONFIG.minOrder-cartTotal)} more to continue.`;
+    return;
+  }
+
+  const name = nameInput.value.trim();
+  const phone = phoneInput.value.trim();
+  const address = addressInput.value.trim();
+
+  [nameInput, phoneInput, addressInput].forEach(el=>el.classList.remove('invalid'));
+
+  let firstInvalid = null;
+  if(!name){ nameInput.classList.add('invalid'); firstInvalid = firstInvalid || nameInput; }
+  if(!phone || phone.replace(/\D/g,'').length < 10){ phoneInput.classList.add('invalid'); firstInvalid = firstInvalid || phoneInput; }
+  if(!address){ addressInput.classList.add('invalid'); firstInvalid = firstInvalid || addressInput; }
+
+  if(firstInvalid){
+    formError.textContent = 'Please fill your name, a valid phone number and address to continue.';
+    firstInvalid.focus();
+    return;
+  }
+  formError.textContent = '';
+
+  // Save as defaults for next time
+  customer = { name, phone, address };
+  saveCustomer();
+
+  let lines = [
+    `Hi ${CONFIG.storeName}, I'd like to place an order:`,
+    ``,
+    `Name: ${name}`,
+    `Phone: ${phone}`,
+    `Address: ${address}`,
+    ``,
+    `Order details:`
+  ];
+  let total = 0;
+  ids.forEach(id=>{
+    const p = productIndex[id];
+    const qty = cart[id];
+    const lineTotal = (p.price||0)*qty;
+    total += lineTotal;
+    lines.push(`• ${p.name} x ${qty}${p.price? ' — '+fmtRs(lineTotal):''}`);
+  });
+  if(total>0) lines.push(``, `Estimated total: ${fmtRs(total)}`);
+  lines.push('', 'Please confirm availability and delivery. Thank you!');
+  const msg = encodeURIComponent(lines.join('\n'));
+  window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${msg}`, '_blank');
+});
+
+function updateCartUI(){
+  const count = Object.values(cart).reduce((a,b)=>a+b,0);
+  cartCountEl.textContent = count;
+  fabCartCountEl.textContent = count;
+}
+updateCartUI();
+
+// ============ SEARCH ============
+const searchInput = document.getElementById('searchInput');
+const noResults = document.getElementById('noResults');
+searchInput.addEventListener('input', ()=>{
+  const q = searchInput.value.trim().toLowerCase();
+  let anyVisible = false;
+  document.querySelectorAll('.category-section').forEach(section=>{
+    let sectionHasMatch = false;
+    section.querySelectorAll('.card').forEach(card=>{
+      const match = !q || card.dataset.name.includes(q);
+      card.style.display = match ? '' : 'none';
+      if(match) sectionHasMatch = true;
+    });
+    section.style.display = sectionHasMatch ? '' : 'none';
+    if(sectionHasMatch) anyVisible = true;
+  });
+  noResults.style.display = anyVisible ? 'none' : 'block';
+});
+
+// ============ CATEGORY NAV ACTIVE STATE ============
+const sections = Array.from(document.querySelectorAll('.category-section'));
+const chips = Array.from(document.querySelectorAll('.chip'));
+let lastActiveSlug = null;
+function updateActiveChip(){
+  let current = sections[0];
+  const scrollPos = window.scrollY + 140;
+  for(const s of sections){
+    if(s.offsetTop <= scrollPos) current = s;
+  }
+  chips.forEach(c=>c.classList.toggle('active', c.dataset.slug === current.id));
+  if(current.id !== lastActiveSlug){
+    lastActiveSlug = current.id;
+    centerActiveChip();
+  }
+}
+function centerActiveChip(){
+  const activeChip = chips.find(c=>c.dataset.slug === lastActiveSlug);
+  if(!activeChip) return;
+  const nav = document.querySelector('.catnav');
+  const chipCenter = activeChip.offsetLeft + activeChip.offsetWidth/2;
+  const target = chipCenter - nav.clientWidth/2;
+  nav.scrollTo({ left: target, behavior: 'smooth' });
+}
+window.addEventListener('scroll', updateActiveChip);
+updateActiveChip();
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
